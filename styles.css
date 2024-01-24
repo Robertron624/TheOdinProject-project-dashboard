@@ -33,6 +33,7 @@ ul[role="list"],
 ol[role="list"] {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 /* Set core body defaults */
@@ -168,6 +169,67 @@ main .sidebar {
     border: var(--debug-border-1);
 }
 
+main .sidebar .logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+main .sidebar .logo img {
+    width: 2rem;
+    height: 2rem;
+}
+
+main .sidebar .logo h1 {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--text-light);
+}
+
+main .sidebar .user-related {
+    margin-bottom: 2rem;
+}
+
+main .sidebar .system-related,
+main .sidebar .user-related {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+main .sidebar .system-related ul li,
+main .sidebar .user-related ul li {
+    list-style: none;
+    transition: all .2s ease-in-out;
+}
+
+main .sidebar .system-related ul li:hover,
+main .sidebar .user-related ul li:hover {
+    background-color: #2626bb;
+    border-radius: 15px;
+}
+
+main .sidebar .system-related ul li a,
+main .sidebar .user-related ul li a {
+    display: flex;
+    align-items: end;
+    gap: .5rem;
+    padding: .5rem 0;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: .65rem;
+    font-weight: 700;
+}
+
+main .sidebar .system-related ul li a img,
+main .sidebar .user-related ul li a img {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* ---------------------- Content ------------------------------ */
 main .content {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
@@ -178,8 +240,6 @@ main .content {
     border: var(--debug-border-2);
     padding: 0 1rem;
 }
-
-/* ---------------------- Content ------------------------------ */
 
 /* Header */
 main .content .header {
