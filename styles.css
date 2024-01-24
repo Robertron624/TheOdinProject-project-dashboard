@@ -160,6 +160,7 @@ main {
     grid-template-columns: 1fr 3fr;
 }
 
+/* ---------------------- Sidebar ------------------------------ */
 main .sidebar {
     background-color: var(--sidebar-bg);
     padding: 1rem;
@@ -178,6 +179,9 @@ main .content {
     padding: 0 1rem;
 }
 
+/* ---------------------- Content ------------------------------ */
+
+/* Header */
 main .content .header {
     display: grid;
     grid-template-rows: 1.5fr 2fr;
@@ -213,7 +217,7 @@ main .content .header .header__search .searchbar input {
 
 main .content .header .header__search .account {
     display: flex;
-    gap: .5rem;
+    gap: 1.5rem;
     justify-content: flex-end;
     align-items: center;
 }
@@ -233,10 +237,67 @@ main .content .header .header__search .account__avatar {
 
 main .content .header .header__search .account__username {
     font-size: .65rem;
+    font-weight: 700;
     color: var(--text-dark);
     text-decoration: none;
 }
 
+main .content .header .header__greeting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .5rem;
+    border: var(--debug-border-5);
+}
+main .content .header .header__greeting .greeting__user {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+main .content .header .header__greeting .greeting__user .greeting__user--avatar{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+}
+
+main .content .header .header__greeting .greeting__user .greeting__user--username {
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+}
+
+main .content .header .header__greeting .greeting__user .greeting__user--username span {
+    font-size: .65rem;
+}
+
+main .content .header .header__greeting .action__btns {
+    display: flex;
+    gap: .5rem;
+}
+
+main .content .header .header__greeting .action__btns button {
+    border: 1px solid var(--sidebar-bg);
+    border-radius: 15px;
+    padding: .2rem .8rem;
+    background-color: var(--sidebar-bg);
+    color: var(--text-light);
+    font-size: .65rem;
+    transition: all .2s ease-in-out;
+}
+
+main .content .header .header__greeting .action__btns button:hover {
+    background-color: #fff;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+/* Projects and announcements */
 
 main .content .projects-announcements {
     display: grid;
