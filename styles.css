@@ -55,7 +55,7 @@ label {
 
 p,
 h1,
-h2 {
+h2, h3 {
     margin: 0;
     padding: 0;
 }
@@ -233,12 +233,10 @@ main .sidebar .user-related ul li a img {
 main .content {
     grid-column: 2 / -1;
     grid-row: 1 / -1;
-    padding-bottom: 2rem;
     display: grid;
     grid-template-rows: 1fr 4fr;
 
     border: var(--debug-border-2);
-    padding: 0 1rem;
 }
 
 /* Header */
@@ -362,7 +360,8 @@ main .content .header .header__greeting .action__btns button:hover {
 main .content .projects-announcements {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
-    grid-gap: .5rem;
+    background-color: var(--searchbar-bg);
+    padding-top: 1.2rem;
 
     border: var(--debug-border-6);
 }
@@ -373,8 +372,82 @@ main .content .projects-announcements .projects {
 
 main .content .projects-announcements .announcements {
     border: var(--debug-border-8);
+    padding-inline: .7rem;
 }
 
 main .content .projects-announcements h3 {
     font-size: .65rem;
+}
+
+main .content .projects-announcements ul.trending-list,
+main .content .projects-announcements ul.announcements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--text-light);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+main .content .projects-announcements .announcements h3 {
+    margin-bottom: .5rem;
+}
+
+main .content .projects-announcements ul.announcements-list li {
+    border-bottom: 1.4px solid #ccc;
+    padding: .9rem 0;
+}
+
+main .content .projects-announcements ul.announcements-list li:last-child {
+    border-bottom: none;
+}
+
+main .content .projects-announcements ul.announcements-list li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: .55rem;
+
+}
+
+ul.announcements-list li a .title {
+    font-weight: 700;
+    margin-bottom: .2rem;
+}
+
+ul.announcements-list li a .description {
+    font-size: .5rem;
+    color: #666;
+}
+
+main .content .projects-announcements .announcements .trending {
+    margin-top: 1.5rem;
+}
+
+main .content .projects-announcements ul.trending-list {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+
+main .content .projects-announcements ul.trending-list li a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: .55rem;
+    display: flex;
+    gap: 1rem;
+}
+
+main .content .projects-announcements ul.trending-list li a .avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+main .content .projects-announcements ul.trending-list li a .username {
+    font-weight: 700;
+}
+
+main .content .projects-announcements ul.trending-list li a .project {
+    color: #666;
 }
