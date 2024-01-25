@@ -162,6 +162,10 @@ main {
     grid-template-columns: 1fr 3fr;
 }
 
+.container-shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 /* ---------------------- Sidebar ------------------------------ */
 main .sidebar {
     background-color: var(--sidebar-bg);
