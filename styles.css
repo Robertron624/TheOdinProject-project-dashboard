@@ -55,7 +55,7 @@ label {
 
 p,
 h1,
-h2, h3 {
+h2, h3, h4 {
     margin: 0;
     padding: 0;
 }
@@ -144,6 +144,7 @@ body {
     --searchbar-bg: #e2e8f0;
     --text-dark: #000;
     --text-light: #fff;
+    --gold: #f0b429;
 
     --debug-border-1: 2px solid #ff0000;
     --debug-border-2: 2px solid #00ff00;
@@ -166,7 +167,6 @@ main .sidebar {
     background-color: var(--sidebar-bg);
     padding: 1rem;
 
-    border: var(--debug-border-1);
 }
 
 main .sidebar .logo {
@@ -236,7 +236,6 @@ main .content {
     display: grid;
     grid-template-rows: 1fr 4fr;
 
-    border: var(--debug-border-2);
 }
 
 /* Header */
@@ -244,11 +243,9 @@ main .content .header {
     display: grid;
     grid-template-rows: 1.5fr 2fr;
 
-    border: var(--debug-border-3);
 }
 
 main .content .header .header__search {
-    border: var(--debug-border-4);
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
@@ -305,7 +302,6 @@ main .content .header .header__greeting {
     align-items: center;
     justify-content: space-between;
     padding: 0 .5rem;
-    border: var(--debug-border-5);
 }
 main .content .header .header__greeting .greeting__user {
     display: flex;
@@ -340,13 +336,13 @@ main .content .header .header__greeting .action__btns {
 }
 
 main .content .header .header__greeting .action__btns button {
-    border: 1px solid var(--sidebar-bg);
     border-radius: 15px;
     padding: .2rem .8rem;
     background-color: var(--sidebar-bg);
     color: var(--text-light);
     font-size: .65rem;
     transition: all .2s ease-in-out;
+    border: 1px solid var(--sidebar-bg);
 }
 
 main .content .header .header__greeting .action__btns button:hover {
@@ -361,17 +357,58 @@ main .content .projects-announcements {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
     background-color: var(--searchbar-bg);
-    padding-top: 1.2rem;
 
-    border: var(--debug-border-6);
+    padding: 1.2rem 0 1rem 1rem;
+
 }
 
-main .content .projects-announcements .projects {
-    border: var(--debug-border-7);
+main .content .projects-announcements .projects .projects-container{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    margin-top: .5rem;
+    row-gap: 1rem;
+    column-gap: clamp(.5rem, 1rem, 1.5rem);
 }
 
+main .content .projects-announcements .projects .projects-container .project-card {
+    background-color: var(--text-light);
+    border-radius: 15px;
+    padding: 1rem;
+    font-size: .55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: clamp(7rem, 8rem, 12rem);
+    max-width: 18rem;
+
+    border-left: 3.4px solid var(--gold);
+}
+
+
+.projects .projects-container .project-card h4 {
+    font-size: .6rem;
+    font-weight: 700;
+    margin-bottom: .2rem;
+}
+
+.projects .projects-container .project-card .description {
+    color: #666;
+}
+
+.projects .projects-container .project-card .action-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: .2rem;
+}
+
+.projects .projects-container .project-card .action-btns button {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* Announcements  */
 main .content .projects-announcements .announcements {
-    border: var(--debug-border-8);
     padding-inline: .7rem;
 }
 
@@ -419,9 +456,16 @@ ul.announcements-list li a .description {
     color: #666;
 }
 
-main .content .projects-announcements .announcements .trending {
-    margin-top: 1.5rem;
+main .content .projects-announcements .announcements .announcements-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 1.4rem);
 }
+
+/* main .content .projects-announcements .announcements .trending {
+    margin-top: 1.5rem;
+} */
 
 main .content .projects-announcements ul.trending-list {
     display: flex;
