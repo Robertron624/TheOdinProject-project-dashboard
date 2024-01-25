@@ -160,6 +160,7 @@ body {
 main {
     display: grid;
     grid-template-columns: 1fr 3fr;
+    height: 100vh;
 }
 
 .container-shadow {
@@ -361,7 +362,7 @@ main .content .projects-announcements {
     display: grid;
     grid-template-columns: 3fr 1.5fr;
     background-color: var(--searchbar-bg);
-
+    align-items: flex-start;
     padding: 1.2rem 0 1rem 1rem;
 
 }
@@ -463,8 +464,7 @@ ul.announcements-list li a .description {
 main .content .projects-announcements .announcements .announcements-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: calc(100% - 1.4rem);
+    gap: 1rem;
 }
 
 /* main .content .projects-announcements .announcements .trending {
